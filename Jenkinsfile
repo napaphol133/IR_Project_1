@@ -1,9 +1,24 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Pipeline'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('Print Message') {
       steps {
-        sh 'npm install'
+        echo 'Hello world'
+      }
+    }
+    stage('Sleep') {
+      steps {
+        sleep 5
+      }
+    }
+    stage('List directory') {
+      steps {
+        bat 'dir'
       }
     }
   }
