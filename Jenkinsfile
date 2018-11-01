@@ -16,10 +16,5 @@ pipeline {
         sleep 5
       }
     }
-    stage('List directory') {
-      steps {
-        bat 'dir'
-      }
-    }
   }
 }
