@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    node {
-      label 'Pipeline'
+    docker {
+      image 'node:7-alpine'
     }
 
   }
@@ -11,7 +11,7 @@ pipeline {
         echo 'Hello world'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         echo 'hello'
       }
